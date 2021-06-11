@@ -1,0 +1,314 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+input:focus,button:focus,textarea:focus{
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: navy;
+}
+/* app */
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* loading */
+.loading{
+  color: white;
+  margin:auto;
+}
+
+/* header */
+.header{
+  width:100vw;
+  height: 4rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(49, 49, 121);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+  position: sticky;
+  top:0;
+  color: white;
+}
+
+.leftContainer  ,.rightContainer{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.leftContainer > a ,.rightContainer > a,.leftContainer > span{
+   padding: 0.7rem;
+   font-size: 1.2rem;
+   text-decoration: none;
+   color: white;
+   cursor: pointer;
+}
+
+/* register-login section */
+.registerLoginForm{
+  margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+  border-radius: 12px;
+   padding: 1rem 2rem;
+   max-width: 18rem;
+   background-color: rgba(129, 129, 189, 0.1);
+}
+
+.registerLoginForm > div{
+  display: flex;
+  flex-direction: column;
+}
+
+.registerLoginForm > div > input{
+  width: 15rem;
+  height: 2.5rem;
+  margin:0.5rem auto;
+  border: none;
+  padding-left: 1rem;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
+
+.registerLoginForm > div > button{
+  width:16rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  background-color: navy;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+}
+
+.registerLoginForm > div > span > a{
+  color: blue;
+}
+
+.registerLoginForm > div > h2{
+  margin-bottom: 1rem;
+  color: crimson;
+}
+
+.error{
+  color: red;
+  margin-bottom: 1rem;
+}
+
+/* main */
+.main{
+  height: 75vh;
+  color: white;
+  overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar{
+  display: none;
+}
+
+.main > div{
+  padding: 0.5rem 1rem;
+}
+
+.postTitle{
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid white;
+  text-shadow: 2px 2px 2px cornsilk;
+  font-size: 1.5rem;
+}
+
+/* post */
+
+.author-date{
+  color: green;
+  margin-bottom: 1rem;
+}
+.author-date > span{
+  margin-right: 1rem;
+}
+.like-comment{
+  margin-top: 1rem;
+  display: flex;
+}
+
+.like-comment> div
+{
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.like-comment> div:last-child input
+{
+  height: 2rem;
+  border-color: blue;
+  padding-left: 0.5rem;
+}
+.like-comment> div:last-child button{
+  height: 2.25rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
+
+/*create post */
+.createPost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createPost >div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+
+.createPost >div:nth-child(2) > input{
+  min-width: 18rem;
+  width: 25rem;
+  height: 2.5rem;
+  margin:0.5rem auto;
+  border: 2px solid white;
+  padding-left: 1rem;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+}
+
+.createPost >div>textarea{
+  margin:0.5rem auto;
+  border: none;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  min-width: 17rem;
+  width: 24rem;
+  height: 10rem;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.createPost >div>button{
+  min-width: 12rem;
+  width: 15rem;
+  height: 2.5rem;
+  background-color: blue;
+  color: white;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.posts{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  padding: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: bolder;
+  background-color: white;
+  color: black;
+  box-shadow: 4px 4px rgba(0,0,0,0.3);
+}
+
+.card>div{
+  font-size: 1.1rem;
+  margin: 0.3rem;
+}
+
+.edit,.delete{
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.approveIcon,.rejectIcon{
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+  margin-right: 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.approveIcon{
+  color: green;
+}
+
+.blogImage{
+  width: 15rem;
+  height: 15rem;
+  margin: auto;
+}
+
+.blogImgContainer{
+  margin-bottom: 1rem;
+}
+
+/* comments */
+.comments{
+  color: white;
+  border: 2px solid white;
+  margin: 1rem;
+  border-radius: 12px;
+}
+.comments .comment{
+  margin-bottom: 1rem;
+}
+.comments h3{
+  display: flex;
+  align-items: center;
+}
+.commentTitle{
+  margin-top: 1rem;
+  padding-left:1rem;
+}
+.deleteComment{
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.likeBtn{
+  cursor: pointer;
+}
+
+/* footer */
+
+.footer{
+  width: 100vw;
+  height: 4rem;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 49, 121);
+  box-shadow: -4px -4px 4px rgba(0,0,0,0.3);
+  color: white;
+}
